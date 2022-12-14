@@ -1,0 +1,449 @@
+body {
+	background-color: $dark-grey;
+	font-family: $font-family;
+}
+
+main {
+    border-bottom: 0.5px solid $inputgrey;
+}
+
+input {
+	background-color: $inputgrey;
+	border: 0;
+	outline: 0;
+	width: 90%;
+	
+}
+
+::placeholder {
+	@include text (400, 14px, 21px, $dark-white);
+	background-color: $inputgrey;
+}
+
+.container {
+	width: 1224px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.button {
+	width: 118px;
+	height: 48px;
+	background: $orange;
+	border-radius: 8px;
+	color: $white;
+	border: 0;
+}
+
+.header {
+	height: 48px;
+
+	&__wrp {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-controls {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+
+.icon-logo {
+	background-color: $orange;
+	border-radius: 8px;
+}
+
+.controls {
+	&__p {
+		margin-left: 12px;
+		@include text(600, 22px, 33px, $white);		
+	}
+
+	&__text {
+		@include text(600, 16px, 24px, $dark-white);
+	}
+
+	&__btn {
+		background-color: $orange;
+		color: $white;
+		margin-left: 16px;
+	}
+}
+
+.awstools {
+	display: flex;
+	margin-top: 104px;
+
+	&__block {
+		width: 50%;
+
+		&-heading1 {
+			@include text(500, 50px, 70px, $white);
+			margin-bottom: 30px;
+		}
+		&-heading2 {
+			@include text(400, 18px, 30px, $dark-white);
+			margin-bottom: 60px;
+		}
+		&-dot {
+			color: $orange;
+		}
+		&-form {
+			display:flex;
+			flex-direction:row;
+			justify-content: space-between;
+			border-radius: 15px; 
+			padding: 20px;
+			background-color: $inputgrey;
+			margin-bottom: 110px;
+		}
+		&-img {
+			display: flex;
+			a {
+				margin-right: 5%;
+			}
+		}
+	}
+	&__photo {
+		&-img {
+			margin-left: 20%;
+		}
+	}
+}
+
+.form {
+	&__field {
+		display: flex;
+		width: 80%;
+
+		&-loupe {
+			margin-top: 35%;
+			margin-right: 5px;
+		}
+	}
+}
+
+.awstools__block-form:hover,
+.awstools__block-form:focus {
+	box-shadow: 0px 4px 4px $input-black;
+}
+
+.poptools {
+	margin-top: 200px;
+
+	&__heading {
+		text-align: center;
+	}
+	&__list {
+		display: flex;
+		gap: 40px;
+	}
+	&__item {
+		margin-left: 10px;
+		margin-bottom: 30px;
+	}
+	&__blur {
+		display: none;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 33px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 15px;
+	}
+	&__inner {
+		min-height: 40%;
+	}
+	&__content {
+		display: flex;
+		
+		&-col{
+			margin-left: 5%;
+			
+			&-big {
+				white-space: nowrap;
+				@include text (500, 24px, 36px, $white);
+			}
+			&-small {
+				@include text (400, 18px, 27px, $dark-orange);
+			}
+		}
+	}
+	&__desc {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		@include text (400, 16px, 30px, $dark-white);
+	}
+	&__icons {
+		display: flex;
+		justify-content: space-between;
+
+		&-btn {
+			background-color: $dark-grey;
+			border: none;
+			color: $dark-white;
+		}
+	}
+	&__btn {
+		margin-top: 100px;
+		text-align: center;
+
+		&-load {
+			width: 184px;
+			height: 64px;
+			color: $orange;
+			background-color: $dark-grey;
+			border: 1px solid $greycard;
+			border-radius: 8px;
+		}
+	}
+}
+
+.second-row {
+	margin-top: 100px;
+}
+
+.icon-like {
+	color: $dark-white;
+}
+
+.button-visit {
+	width: 106px;
+	height: 42px;
+}
+
+.poptools__item:hover {
+	background: $greycard;
+	border-radius: 15px;
+
+	.poptools__blur {
+		display: block;
+		position: absolute;
+		background: $orange-blur;
+		filter: blur(25px);
+		width: 40px;
+		height: 40px;
+		right: 0;
+		top: 0;
+	}
+	.btn-like {
+		width: 42px;
+		height: 42px;
+		background: $inputgrey;
+		box-shadow: 0px 5px 10px -3px $like-shadow;
+		border-radius: 8px;
+	}
+	.icon-like {
+		color: $red;
+	}
+	.btn-add {
+		background: $greycard;
+	}
+	.button-visit {
+		background-color: $orange;
+		color: $white;
+		border-radius: 8px;
+	}
+}
+
+.brands {
+	background: $brand-grey;
+	backdrop-filter: blur(25px);
+	border-radius: 25px;
+	text-align: center;
+	margin-top: 200px;
+
+	&__wrapper {
+		position: relative;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+	&__blur {
+		display: none;
+	}
+	&__heading {
+		padding-top: 55px;
+		margin-bottom: 55px;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 60px;
+	}
+}
+
+.brands:hover,
+.brands:focus {
+	outline: 2px solid $greycard;
+
+	.brands__blur {
+		display: block;
+		position: absolute;
+		background: $red;
+		filter: blur(50px);
+		width: 40px;
+		height: 40px;
+		left: 0;
+		top: 0;
+	}
+}
+
+.newcomer {
+	display: flex;
+	margin-top: 220px;
+
+	&__btn {
+		width: 198px;
+	}
+}
+
+.testimonial {
+	margin-top: 200px;
+
+	&__photo {
+		width: 399px;
+		height: 492px;
+	}
+	&__quotes {
+		position: absolute;
+		right: 15%;
+		bottom: 352px;
+		left: 32%;
+		z-index: 10;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		color: $white;
+		text-align: center;
+	}
+	&__block {
+		position: absolute;
+		right: 1%;
+		bottom: 5px;
+		left: 15%;
+		z-index: 10;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		color: $white;
+
+		&-info {
+			width: 265px;
+			height: 91px;
+			background: $brand-grey;
+			backdrop-filter: blur(25px);
+			border-radius: 8px;
+			padding-top: 10px;
+			padding-left: 22px;
+		}
+	}
+	
+}
+
+.info {
+	&__name {
+		letter-spacing: 0.015em;
+		@include text(500, 26px, 39px, $dark-white);
+	}
+	&__position {
+		@include text(400, 16px, 24px, $dark-white);
+	}
+}
+
+.carousel-caption {
+	right: 20%;
+    left: 35%;
+    bottom: 186px;
+	text-align: left;
+}
+
+.carousel-item {
+	margin-left: 124px;
+	margin-bottom: 100px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+	width: 5%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-prev-icon:hover {
+	.carousel-control-prev-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff6e30' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")!important;
+	}
+}
+
+.carousel-control-next-icon:hover,
+.carousel-control-next:hover {
+	.carousel-control-next-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff6e30' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;	
+	}	
+}
+
+.carousel-indicators li {
+	width: 44px;
+	height: 6px;
+	border-radius: 4px;
+}
+
+.carousel-indicators .active {
+    background-color: $orange;
+}
+
+.join {
+	width: 553px;
+	margin: auto;
+    padding-top: 250px;
+	text-align: center;
+	padding-bottom: 240px;
+
+	&__form {
+		margin-bottom: 0;
+	}
+	&__btn {
+		width: 130px;
+	}
+}
+
+.footer {
+	display: flex;
+	margin-top: 70px;
+
+	a {
+		display: block;
+	}
+
+	&__desc {
+		@include text (500, 16px, 24px, $white);
+	}
+	&__text {
+		@include text (400, 14px, 25px, $dark-white);
+	}
+	&__credentns {
+		width: 260px;
+		margin-right: 155px;
+		&-icon {
+			color: $white;
+		}
+	}
+	&__contacts{
+		display: flex;
+
+		&-us {
+			margin-right: 115px;
+		}
+		&-categories {
+			margin-right: 115px;
+		}
+		&-text {
+			margin-bottom: 20px;
+			@include text (500, 20px, 30px, $white);
+		}
+		&-desc {
+			margin-bottom: 10px;
+			@include text (500, 16px, 24px, $dark-white);
+		}
+	}
+}
